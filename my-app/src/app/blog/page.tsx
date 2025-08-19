@@ -13,7 +13,7 @@ export default function BlogPage() {
             </Link>
           </h2>
           <p className="text-gray-600">
-            블로그 포스트 미리보기 내용이 들어갈 자리입니다.
+            블로그 포스트 미리보기 내용이 들어갈 자리
           </p>
         </article>
       </div>
