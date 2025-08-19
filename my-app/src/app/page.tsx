@@ -1,13 +1,9 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import Intro from "@/components/Intro";
 
 export default function Home() {
   return (
-    <main>
-      <Header />
+    <main className="min-h-screen flex items-center justify-center">
       <Intro />
-      <Footer />
     </main>
   );
 }
