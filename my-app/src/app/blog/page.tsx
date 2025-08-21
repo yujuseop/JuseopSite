@@ -12,9 +12,7 @@ export default function BlogPage() {
               첫 번째 블로그 포스트
             </Link>
           </h2>
-          <p className="text-gray-600">
-            블로그 포스트 미리보기 내용이 들어갈 자리
-          </p>
+          <p className="text-gray-600">블로그 포스트 미리보기 내용</p>
         </article>
       </div>
     </div>
