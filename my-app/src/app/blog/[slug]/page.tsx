@@ -1,13 +1,17 @@
 import { getPostData, getAllPostIds } from "@/utils/mdUtils";
 import { marked } from "marked";
 
-export async function generateStaticParams() {
-  const paths = getAllPostIds();
-  return paths;
+export function generateStaticParams() {
+  return getAllPostIds();
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const post = getPostData(params.slug);
+export default async function BlogPost({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const post = getPostData(slug);
   const contentHtml = marked(post.content);
 
   return (

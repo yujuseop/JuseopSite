@@ -4,17 +4,17 @@ import {
 } from "@/utils/mdUtils";
 import { marked } from "marked";
 
-export async function generateStaticParams() {
-  const paths = getAllTroubleShootings();
-  return paths;
+export function generateStaticParams() {
+  return getAllTroubleShootings();
 }
 
-export default function troubleShootingPost({
+export default async function TroubleShootingPost({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const post = getTroubleShootingData(params.slug);
+  const { slug } = await params;
+  const post = getTroubleShootingData(slug);
   const contentHtml = marked(post.content);
 
   return (

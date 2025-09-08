@@ -16,13 +16,9 @@ export interface PostData {
 // 블로그 포스트 관련 함수들
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(blogDirectory);
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        slug: fileName.replace(/\.md$/, ""),
-      },
-    };
-  });
+  return fileNames.map((fileName) => ({
+    slug: fileName.replace(/\.md$/, ""),
+  }));
 }
 
 export function getPostData(slug: string): PostData {
@@ -52,13 +48,9 @@ export function getAllPosts(): PostData[] {
 // 트러블 슈팅 관련 함수들
 export function getAllTroubleShootingIds() {
   const fileNames = fs.readdirSync(troubleDirectory);
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        slug: fileName.replace(/\.md$/, ""),
-      },
-    };
-  });
+  return fileNames.map((fileName) => ({
+    slug: fileName.replace(/\.md$/, ""),
+  }));
 }
 
 export function getTroubleShootingData(slug: string): PostData {
