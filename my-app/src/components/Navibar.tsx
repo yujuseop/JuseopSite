@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navibar() {
   return (
-    <nav className="p-6 flex gap-3 text-3xl font-bold">
+    <nav className="p-6 flex gap-3 text-lg font-bold">
       <Link href="/blog" className="hover:text-blue-600">
         Blog
       </Link>
