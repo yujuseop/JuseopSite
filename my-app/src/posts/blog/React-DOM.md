@@ -4,8 +4,6 @@ date: "2025-03-19"
 description: "React의 VirtualDOM에 대해서 알아보자."
 ---
 
-# React의 Virtual DOM에 대하여
-
 ## Virtual DOM이란?
 
 Virtual DOM은 실제 DOM의 가벼운 복사본으로, 메모리에 존재하는 JavaScript 객체이다. React가 UI 업데이트를 효율적으로 처리하기 위해 사용하는 핵심 개념이다.

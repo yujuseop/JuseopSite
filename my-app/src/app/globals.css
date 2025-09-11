@@ -11,3 +11,22 @@ body {
 .dark body {
   @apply bg-zinc-900 text-white;
 }
+
+/* 페이지에서 prose-slate / dark:prose-invert로 제어 */
+@layer components {
+  .prose-content {
+    /* 라이트/다크 자동 반전은 prose-slate + dark:prose-invert로 처리 */
+    @apply prose prose-lg prose-slate dark:prose-invert
+      prose-pre:bg-gray-100 dark:prose-pre:bg-gray-800;
+  }
+}
+
+/* prose 색 변수 지정: 라이트/다크 명확화 */
+.prose-content {
+  --tw-prose-body: #0f172a; /* slate-900 */
+  --tw-prose-headings: #0f172a;
+}
+.dark .prose-content {
+  --tw-prose-body: #e5e7eb; /* gray-200 */
+  --tw-prose-headings: #ffffff;
+}
