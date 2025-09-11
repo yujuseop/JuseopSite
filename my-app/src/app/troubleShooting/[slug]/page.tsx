@@ -18,7 +18,7 @@ export default async function TroubleShootingPost({
   const contentHtml = marked(post.content);
 
   return (
-    <article className="container mx-auto px-4 py-8 prose prose-lg">
+    <article className="container mx-auto px-4 py-8 prose prose-lg dark:prose-invert">
       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
       <time className="text-gray-500 mb-8 block">{post.date}</time>
       <div dangerouslySetInnerHTML={{ __html: contentHtml }} />

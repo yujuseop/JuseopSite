@@ -28,9 +28,9 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed bottom-6 right-6 z-50 p-3 bg-white dark:bg-zinc-800 text-black dark:text-white shadow rounded-full"
+      className="fixed bottom-6 right-6 z-50 p-1 text-lg bg-white dark:bg-zinc-800 text-black dark:text-white shadow rounded-full"
     >
-      {isDark ? "🌞 Light" : "🌙 Dark"}
+      {isDark ? "☀️" : "🌙"}
     </button>
   );
 }
