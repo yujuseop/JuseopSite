@@ -25,8 +25,12 @@ body {
 .prose-content {
   --tw-prose-body: #0f172a; /* slate-900 */
   --tw-prose-headings: #0f172a;
+  --tw-prose-code: #0f172a;
+  --tw-prose-pre-code: #0f172a;
 }
 .dark .prose-content {
   --tw-prose-body: #e5e7eb; /* gray-200 */
   --tw-prose-headings: #ffffff;
+  --tw-prose-code: #e5e7eb;
+  --tw-prose-pre-code: #e5e7eb;
 }
