@@ -21,7 +21,7 @@ export default function Intro() {
       <p>감사합니다!</p>
       <a
         href="mailto:juseop159@gmail.com"
-        className="inline-block py-3 px-6 rounded full transition"
+        className="inline-block py-3 px-6 rounded full transition border border-black dark:border-white"
       >
         이메일 보내기
       </a>

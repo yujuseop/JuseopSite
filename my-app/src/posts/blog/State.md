@@ -1,6 +1,6 @@
 ---
 title: "React 상태 관리 기초: useState/useReducer/Context와 서버 상태 구분"
-date: "2025-10-01"
+date: "2025-05-01"
 description: "클라이언트/서버 상태 구분, useState·useReducer·Context 활용과 성능 팁"
 ---
 
