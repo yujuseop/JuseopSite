@@ -6,7 +6,7 @@ export default function TroubleShootingPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">트러블 슈팅</h1>
+      <h1 className="text-2xl font-bold mb-6 lg:text-3xl">트러블 슈팅</h1>
       <div className="grid gap-6">
         {posts.map((post) => (
           <Link
@@ -15,8 +15,12 @@ export default function TroubleShootingPage() {
             className="hover:text-blue-600"
           >
             <article className="p-4 border rounded-lg shadow hover:shadow-md transition-shadow">
-              <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
-              <p className="text-gray-600 mb-2">{post.description}</p>
+              <h2 className="text-sm font-semibold mb-2 lg:text-xl">
+                {post.title}
+              </h2>
+              <p className="text-gray-600 mb-2 text-sm lg:text-base ">
+                {post.description}
+              </p>
               <time className="text-sm text-gray-500">{post.date}</time>
             </article>
           </Link>

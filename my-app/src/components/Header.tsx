@@ -4,8 +4,11 @@ import Navibar from "./Navibar";
 
 export default function Header() {
   return (
-    <header className="flex justify-between sticky bg-blue-200 top-0 left-0 right-0 items-center p-3 p-left-6 dark:bg-gray-800 text-white text-4xl text-left transition-colors duration-200">
-      <Link href="/">🧑🏻‍💻 Juseop World</Link>
+    <header className="flex p-5 sticky bg-gray-200 top-0 left-0 right-0 items-center  p-left-6 dark:bg-gray-800 text-black dark:text-white text-3xl text-left transition-colors duration-200 lg:text-5xl">
+      <Link href="/" className="font-bold">
+        {" "}
+        JS World
+      </Link>
       <Navibar />
       <ThemeToggle />
     </header>

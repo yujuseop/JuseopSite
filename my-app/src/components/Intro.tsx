@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 export default function Intro() {
   return (
-    <section className="flex flex-col items-start justify-center px-4 text-left text-2xl gap-4">
+    <section className="flex flex-col items-start justify-center px-4 text-left text-sm lg:text-2xl gap-4">
       <p>
         안녕하세요! 저는{" "}
         <strong className="text-blue-600"> 프론트엔드 개발자 유주섭</strong>
@@ -19,12 +21,13 @@ export default function Intro() {
       </p>
       <p>제 페이지에 와주신 여러분 좋은 하루 되시길 바랍니다!</p>
       <p>감사합니다!</p>
-      <a
+      <Link
         href="mailto:juseop159@gmail.com"
+        target="_blank"
         className="inline-block py-3 px-6 rounded full transition border border-black dark:border-white"
       >
         이메일 보내기
-      </a>
+      </Link>
     </section>
   );
 }
