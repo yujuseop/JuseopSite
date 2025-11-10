@@ -2,32 +2,32 @@ import Link from "next/link";
 
 export default function Intro() {
   return (
-    <section className="flex flex-col items-start justify-center px-4 text-left text-sm lg:text-2xl gap-4">
-      <p>
-        안녕하세요! 저는{" "}
+    <section className="flex flex-col justify-center text-center px-4  gap-4 ">
+      <p className="font-bold text-xl lg:text-3xl">
+        안녕하세요!
         <strong className="text-blue-600"> 프론트엔드 개발자 유주섭</strong>
         입니다. <br />
+      </p>
+      <p className="text-sm lg:text-xl">
         사용자 경험을 더 좋게 만들기 위해 항상 고민하고, 더 나은 코드를 향해
         끊임없이 성장하는 중이에요.
       </p>
-      <p>
-        언제든지{" "}
-        <span className="uderline decoration-dashed">
-          이메일로 편하게 연락 주세요!{" "}
-        </span>
-        <br />
-        좋은 기회가 된다면 <strong>직접 만나서 커피 한잔</strong>, 그리고{" "}
-        <strong>개발 이야기</strong>를 함께 나누면 정말 좋겠어요!
-      </p>
-      <p>제 페이지에 와주신 여러분 좋은 하루 되시길 바랍니다!</p>
-      <p>감사합니다!</p>
-      <Link
-        href="mailto:juseop159@gmail.com"
-        target="_blank"
-        className="inline-block py-3 px-6 rounded full transition border border-black dark:border-white"
-      >
-        이메일 보내기
-      </Link>
+      <div className="flex justify-center">
+        <Link
+          href="mailto:juseop159@gmail.com"
+          target="_blank"
+          className="inline-block p-3 m-3 rounded text-xs full transition border lg:text-sm border-black dark:border-white"
+        >
+          이메일 보내기 ✉️
+        </Link>
+        <a
+          href="/assets/유주섭 이력서.pdf"
+          target="_blank"
+          className="inline-block p-3 m-3 rounded text-xs full transition border lg:text-sm border-black dark:border-white"
+        >
+          이력서 다운로드 ↓
+        </a>
+      </div>
     </section>
   );
 }
