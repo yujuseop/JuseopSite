@@ -57,8 +57,9 @@ export default function Modal({
       }}
     >
       <div
-        className="relative w-full max-w-xl rounded-2xl bg-white shadow-2xl transition dark:bg-gray-900"
+        className="relative flex w-full max-w-xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl transition dark:bg-gray-900"
         onClick={(event) => event.stopPropagation()}
+        style={{ maxHeight: "90vh" }}
       >
         <button
           type="button"
@@ -69,7 +70,7 @@ export default function Modal({
           ×
         </button>
 
-        <div className="space-y-4 p-6">
+        <div className="space-y-4 overflow-y-auto p-6">
           {title ? (
             <header className="space-y-1">
               <h3 id="modal-title" className="text-2xl font-semibold">

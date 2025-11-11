@@ -3,6 +3,7 @@ import Image from "next/image";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Develop from "@/components/Develop";
+import Experience from "@/components/Experience";
 import Navibar from "@/components/Navibar";
 
 export default function Home() {
@@ -23,8 +24,12 @@ export default function Home() {
       <section>
         <Develop />
       </section>
+
       <section>
         <Skills />
+      </section>
+      <section>
+        <Experience />
       </section>
       <section>
         <Projects />
