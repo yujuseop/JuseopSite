@@ -9,6 +9,7 @@ interface ModalProps {
   footer?: ReactNode;
   children?: ReactNode;
   closeOnBackdrop?: boolean;
+  metadata?: ReactNode;
 }
 
 export default function Modal({
@@ -19,6 +20,7 @@ export default function Modal({
   footer,
   children,
   closeOnBackdrop = true,
+  metadata,
 }: ModalProps) {
   useEffect(() => {
     if (!open) return;
@@ -83,10 +85,16 @@ export default function Modal({
               ) : null}
             </header>
           ) : null}
-
-          <div className="text-sm leading-relaxed text-muted-foreground">
-            {children}
-          </div>
+          {metadata ? (
+            <div className="space-y-2 rounded-xl bg-muted/60 p-3 text-sm text-muted-foreground">
+              {metadata}
+            </div>
+          ) : null}
+          {children ? (
+            <div className="text-sm leading-relaxed text-muted-foreground">
+              {children}
+            </div>
+          ) : null}
         </div>
 
         {footer ? (

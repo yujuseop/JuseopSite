@@ -3,10 +3,11 @@ import Image from "next/image";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Develop from "@/components/Develop";
+import Navibar from "@/components/Navibar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center gap-4">
+    <main className="min-h-screen flex flex-col items-center justify-center gap-6">
       <section className="flex justify-center items-center">
         <Image
           src="/assets/yujuseop.jpeg"
@@ -28,7 +29,9 @@ export default function Home() {
       <section>
         <Projects />
       </section>
-      <section></section>
+      <section>
+        <Navibar />
+      </section>
     </main>
   );
 }

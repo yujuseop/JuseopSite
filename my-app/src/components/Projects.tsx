@@ -4,11 +4,16 @@ import Link from "next/link";
 
 import Feed, { FeedItem } from "@/components/ui/Feed";
 import Modal from "@/components/ui/Modal";
+import { PROJECTS } from "@/content/portfolio";
 
 type Project = FeedItem & {
+  slug: string;
   detail: {
     summary: string;
     highlights: string[];
+    participants: string;
+    duration: string;
+    techStack: { label: string }[];
     links?: {
       demo?: string;
       repo?: string;
@@ -16,32 +21,21 @@ type Project = FeedItem & {
   };
 };
 
-const projects: Project[] = [
-  {
-    emoji: "🚀",
-    title: "개인 포트폴리오 사이트",
-    description:
-      "Next.js와 Tailwind CSS로 구축한 반응형 포트폴리오, 다크 모드와 블로그를 지원합니다.",
-    techStack: [
-      { label: "Next.js" },
-      { label: "TypeScript" },
-      { label: "Tailwind CSS" },
-      { label: "MDX" },
-    ],
-    detail: {
-      summary:
-        "디자인 시스템과 콘텐츠 관리를 효율적으로 적용하기 위해 Next.js 14 App Router를 활용해 설계한 개인 포트폴리오입니다.",
-      highlights: [
-        "프로젝트·블로그·연락처를 한 곳에서 관리하도록 정보 구조(IA)를 재정비",
-        "MDX 기반 블로그 게시글 빌드 파이프라인을 구축해 마크다운만으로 글 작성 가능",
-        "다크 모드 및 반응형 레이아웃을 Tailwind CSS 커스텀 프리셋으로 구성",
-      ],
-      links: {
-        repo: "https://github.com/yujuseop/JuseopSite",
-      },
-    },
+const projects: Project[] = PROJECTS.map((project) => ({
+  slug: project.slug,
+  emoji: project.emoji,
+  title: project.title,
+  description: project.summary,
+  techStack: project.techStack.map((label) => ({ label })),
+  detail: {
+    summary: project.description,
+    highlights: project.highlights,
+    participants: project.participants,
+    duration: project.duration,
+    techStack: project.techStack.map((label) => ({ label })),
+    links: project.links,
   },
-];
+}));
 
 export default function Projects() {
   const [selected, setSelected] = useState<Project | null>(null);
@@ -59,9 +53,11 @@ export default function Projects() {
   return (
     <>
       <section className="space-y-4">
-        <header className="space-y-2">
-          <h2 className="text-2xl font-bold">프로젝트</h2>
-          <p className="text-muted-foreground">
+        <header className="space-y-2 text-center">
+          <h2 className="text-xl lg:text-2xl font-bold text-blue-600">
+            프로젝트
+          </h2>
+          <p className="text-sm text-muted-foreground lg:text-base">
             대표 프로젝트를 피드 형식으로 미리 살펴보고, 클릭해 상세 설명을
             확인하세요.
           </p>
@@ -85,6 +81,20 @@ export default function Projects() {
         onClose={() => setSelected(null)}
         title={selected?.title}
         description={selected?.description}
+        metadata={
+          selected ? (
+            <dl className="grid grid-cols-1 gap-2 text-sm text-muted-foreground lg:grid-cols-2">
+              <div className="flex flex-col gap-1">
+                <dt className="font-medium text-foreground">참여 인원</dt>
+                <dd>{selected.detail.participants}</dd>
+              </div>
+              <div className="flex flex-col gap-1">
+                <dt className="font-medium text-foreground">진행 기간</dt>
+                <dd>{selected.detail.duration}</dd>
+              </div>
+            </dl>
+          ) : null
+        }
         footer={
           selected?.detail.links ? (
             <div className="flex gap-2">
@@ -125,9 +135,9 @@ export default function Projects() {
                 사용 기술 스택
               </h4>
               <div className="flex flex-wrap gap-2">
-                {selected.techStack.map((tech) => (
+                {selected.detail.techStack.map((tech) => (
                   <span
-                    key={`${selected.title}-${tech.label}`}
+                    key={`${selected.slug}-${tech.label}`}
                     className="rounded-full border border-border px-3 py-1 text-xs font-medium text-muted-foreground"
                   >
                     {tech.label}
