@@ -10,7 +10,7 @@ export default function Intro() {
       </p>
       <p className="text-sm lg:text-xl">
         사용자 경험을 더 좋게 만들기 위해 항상 고민하고, 더 나은 코드를 향해
-        끊임없이 성장하는 중이에요.
+        끊임없이 달려나가고 있습니다.
       </p>
       <div className="flex justify-center">
         <Link
