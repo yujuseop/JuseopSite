@@ -9,7 +9,7 @@ const DEVELOPS: Develop[] = [
     id: "frontend",
     title: "프론트엔드 개발",
     description:
-      "React.js를 이용한 프론트엔드 개발을 하며, javascript, typescript의 사용에 능숙합니다. Next.js와 더불어 React Library를 사용하여 개발을 합니다.",
+      "React.js를 이용한 프론트엔드 개발을 하며, javascript와 typescript의 사용에 능숙합니다. Next.js와 더불어 React Library를 사용하여 개발을 합니다.",
   },
   {
     id: "communication",
