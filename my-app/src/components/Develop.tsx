@@ -15,7 +15,7 @@ const DEVELOPS: Develop[] = [
     id: "communication",
     title: "커뮤니케이션 및 협업",
     description:
-      "Github를 이용한 협업을 하며, notion 등의 협업 도구 사용도 가능합니다.  팀 협업 원칙을 준수하며, 커뮤니케이션을 중요시합니다.",
+      "Github를 이용한 협업을 하며, notion 등의 협업 도구 사용도 가능합니다. 팀 협업 원칙을 준수하며, 커뮤니케이션을 중요시합니다.",
   },
 ];
 
