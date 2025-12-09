@@ -58,8 +58,7 @@ export default function Projects() {
             프로젝트
           </h2>
           <p className="text-sm text-muted-foreground lg:text-base">
-            대표 프로젝트를 피드 형식으로 미리 살펴보고, 클릭해 상세 설명을
-            확인하세요.
+            대표 프로젝트를 미리 살펴보고, 클릭해 상세 설명을 확인하세요.
           </p>
         </header>
 
