@@ -18,7 +18,7 @@ export default function TroubleShootingPage() {
               <h2 className="text-sm font-semibold mb-2 lg:text-xl">
                 {post.title}
               </h2>
-              <p className="text-gray-600 mb-2 text-sm lg:text-base ">
+              <p className="text-gray-600 mb-2 text-sm lg:text-base">
                 {post.description}
               </p>
               <time className="text-sm text-gray-500">{post.date}</time>
