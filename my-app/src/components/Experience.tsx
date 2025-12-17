@@ -55,7 +55,7 @@ export default function Experience() {
         <header className="space-y-2 text-center">
           <h2 className="text-2xl font-bold text-blue-600">경력</h2>
           <p className="text-sm text-muted-foreground lg:text-base">
-            프로젝트를 통한 협업 경험을 통해 얻은 실무 역량을 소개합니다.
+            프로젝트와 협업을 통해 얻은 실무 역량을 소개합니다.
           </p>
         </header>
 
