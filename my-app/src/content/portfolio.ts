@@ -59,7 +59,7 @@ export const PROJECTS: ProjectContent[] = [
   {
     slug: "portfolio-site",
     emoji: "🚀",
-    title: "개인 포트폴리오 사이트",
+    title: "YJS 포트폴리오 사이트",
     summary:
       "Next.js와 Tailwind CSS로 구축한 반응형 포트폴리오, 다크 모드와 블로그를 지원합니다.",
     description:
