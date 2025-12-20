@@ -114,7 +114,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="rounded-full border border-border px-4 py-2 text-sm font-medium transition hover:border-blue-500 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-500/10"
                 >
-                  GitHub 바로가기
+                  GitHub
                 </Link>
               ) : null}
             </div>
