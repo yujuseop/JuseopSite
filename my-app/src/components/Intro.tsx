@@ -5,12 +5,13 @@ export default function Intro() {
     <section className="flex flex-col justify-center text-center px-4  gap-4 ">
       <p className="font-bold text-xl lg:text-3xl">
         안녕하세요!
-        <strong className="text-blue-600"> 프론트엔드 개발자 유주섭</strong>
+        <strong className="text-blue-600"> 개발자 유주섭</strong>
         입니다. <br />
       </p>
       <p className="text-sm lg:text-xl">
-        사용자 경험을 더 좋게 만들기 위해 항상 고민하고, 더 나은 코드를 향해
-        끊임없이 성장하는 중이에요.
+        공감과 조율, 그리고 실행력으로 현장의 문제를 코드로 풀어냅니다. <br />
+        환자를 헤아리던 마음으로 사용자의 불편을 먼저 읽고, 시스템으로 답을
+        제시합니다.
       </p>
       <div className="flex justify-center">
         <Link
@@ -21,7 +22,7 @@ export default function Intro() {
           이메일 보내기 ✉️
         </Link>
         <a
-          href="/assets/유주섭 이력서.pdf"
+          href="/assets/유주섭개발자이력서.pdf"
           target="_blank"
           className="inline-block p-3 m-3 rounded text-xs full transition border lg:text-sm border-black dark:border-white"
         >

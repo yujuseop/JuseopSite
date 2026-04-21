@@ -1,26 +1,12 @@
 import Link from "next/link";
-import { get } from "@/utils/apiClient";
-import type { PageResponse, PostSummary } from "@/types/api";
+import { getPosts } from "@/utils/posts";
 
-export const revalidate = 60;
-
-async function fetchPosts() {
-  try {
-    return await get<PageResponse<PostSummary>>(
-      "/api/posts?type=troubleShooting&size=50"
-    );
-  } catch {
-    return null;
-  }
-}
-
-export default async function TroubleShootingPage() {
-  const data = await fetchPosts();
-  const posts = data?.content ?? [];
+export default function TroubleShootingPage() {
+  const posts = getPosts("troubleShooting");
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold mb-6 lg:text-3xl">트러블 슈팅</h1>
+      <h1 className="text-2xl font-bold mb-6 lg:text-3xl">트러블슈팅</h1>
       <div className="grid gap-6">
         {posts.map((post) => (
           <Link
@@ -35,16 +21,9 @@ export default async function TroubleShootingPage() {
               <p className="text-gray-600 dark:text-gray-400 mb-2 text-sm lg:text-base">
                 {post.description}
               </p>
-              <div className="flex items-center justify-between">
-                <time className="text-gray-500 dark:text-gray-400 text-xs lg:text-sm">
-                  {post.publishedAt}
-                </time>
-                <div className="flex items-center gap-3 text-xs text-gray-400 dark:text-gray-500">
-                  <span>👁 {post.viewCount}</span>
-                  <span>❤️ {post.likeCount}</span>
-                  <span>💬 {post.commentCount}</span>
-                </div>
-              </div>
+              <time className="text-gray-500 dark:text-gray-400 text-xs lg:text-sm">
+                {post.date}
+              </time>
             </article>
           </Link>
         ))}

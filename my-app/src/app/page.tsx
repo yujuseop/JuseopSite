@@ -65,7 +65,7 @@ export default function Home() {
           안녕하세요, 유주섭입니다
         </h1>
         <p className="text-sm text-muted-foreground lg:text-base">
-          프론트엔드 개발자 포트폴리오입니다. 원하는 섹션을 선택하세요.
+          개발자 포트폴리오입니다. 섹션을 선택하세요.
         </p>
       </header>
 
