@@ -7,5 +7,5 @@ import java.util.List;
 @Mapper
 public interface SkillMapper {
     List<SkillCategory> findAllCategories();
-    List<String> findSkillsByCategoryId(String categoryId);
+    List<SkillCategory.Skill> findSkillsByCategoryId(String categoryId);
 }

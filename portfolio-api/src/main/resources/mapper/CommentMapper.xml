@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.juseop.portfolio.mapper.CommentMapper">
+
+    <resultMap id="commentMap" type="Comment">
+        <id     property="id"         column="id"/>
+        <result property="slug"       column="slug"/>
+        <result property="authorName" column="author_name"/>
+        <result property="content"    column="content"/>
+        <result property="createdAt"  column="created_at"/>
+    </resultMap>
+
+    <select id="findBySlug" resultMap="commentMap">
+        SELECT id, slug, author_name, content, created_at
+        FROM comments
+        WHERE slug = #{slug}
+        ORDER BY created_at ASC
+    </select>
+
+    <insert id="insert">
+        INSERT INTO comments (slug, author_name, content)
+        VALUES (#{slug}, #{dto.authorName}, #{dto.content})
+    </insert>
+
+</mapper>

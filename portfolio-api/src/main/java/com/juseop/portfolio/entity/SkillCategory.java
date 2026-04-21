@@ -10,5 +10,12 @@ public class SkillCategory {
     private String title;
     private String description;
     private Integer displayOrder;
-    private List<String> skills;
+    private List<Skill> skills;
+
+    @Getter @Setter
+    public static class Skill {
+        private String name;
+        private Integer level;
+        private String description;
+    }
 }
