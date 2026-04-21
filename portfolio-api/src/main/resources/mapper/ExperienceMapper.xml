@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.juseop.portfolio.mapper.ExperienceMapper">
+
+    <resultMap id="ExperienceResultMap" type="Experience">
+        <id property="id" column="id"/>
+        <result property="company" column="company"/>
+        <result property="emoji" column="emoji"/>
+        <result property="role" column="role"/>
+        <result property="employmentType" column="employment_type"/>
+        <result property="period" column="period"/>
+        <result property="summary" column="summary"/>
+        <result property="team" column="team"/>
+        <result property="displayOrder" column="display_order"/>
+    </resultMap>
+
+    <resultMap id="HighlightResultMap" type="ExperienceHighlight">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="displayOrder" column="display_order"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="ExperienceResultMap">
+        SELECT id, company, emoji, role, employment_type, period, summary, team, display_order
+        FROM experiences
+        ORDER BY display_order ASC
+    </select>
+
+    <select id="findTechStackByExperienceId" resultType="String">
+        SELECT tech_name
+        FROM experience_tech_stacks
+        WHERE experience_id = #{experienceId}
+        ORDER BY display_order ASC
+    </select>
+
+    <select id="findHighlightsByExperienceId" resultMap="HighlightResultMap">
+        SELECT id, title, display_order
+        FROM experience_highlights
+        WHERE experience_id = #{experienceId}
+        ORDER BY display_order ASC
+    </select>
+
+    <select id="findDetailsByHighlightId" resultType="String">
+        SELECT content
+        FROM experience_highlight_details
+        WHERE highlight_id = #{highlightId}
+        ORDER BY display_order ASC
+    </select>
+
+</mapper>

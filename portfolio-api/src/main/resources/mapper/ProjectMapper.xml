@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.juseop.portfolio.mapper.ProjectMapper">
+
+    <resultMap id="ProjectResultMap" type="Project">
+        <id property="id" column="id"/>
+        <result property="slug" column="slug"/>
+        <result property="emoji" column="emoji"/>
+        <result property="title" column="title"/>
+        <result property="summary" column="summary"/>
+        <result property="description" column="description"/>
+        <result property="participants" column="participants"/>
+        <result property="duration" column="duration"/>
+        <result property="demoUrl" column="demo_url"/>
+        <result property="repoUrl" column="repo_url"/>
+        <result property="displayOrder" column="display_order"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="ProjectResultMap">
+        SELECT id, slug, emoji, title, summary, description,
+               participants, duration, demo_url, repo_url, display_order
+        FROM projects
+        ORDER BY display_order ASC
+    </select>
+
+    <select id="findBySlug" resultMap="ProjectResultMap">
+        SELECT id, slug, emoji, title, summary, description,
+               participants, duration, demo_url, repo_url, display_order
+        FROM projects
+        WHERE slug = #{slug}
+    </select>
+
+    <select id="findTechStackByProjectId" resultType="String">
+        SELECT tech_name
+        FROM project_tech_stacks
+        WHERE project_id = #{projectId}
+        ORDER BY display_order ASC
+    </select>
+
+    <select id="findHighlightsByProjectId" resultType="String">
+        SELECT content
+        FROM project_highlights
+        WHERE project_id = #{projectId}
+        ORDER BY display_order ASC
+    </select>
+
+</mapper>

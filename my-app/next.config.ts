@@ -11,6 +11,17 @@ const nextConfig: NextConfig = {
     };
     return config;
   },
+  // Spring Boot API 서버로의 직접 프록시
+  async rewrites() {
+    return process.env.NODE_ENV === "development"
+      ? [
+          {
+            source: "/api-proxy/:path*",
+            destination: "http://localhost:8080/api/:path*",
+          },
+        ]
+      : [];
+  },
 };
 
 export default nextConfig;
