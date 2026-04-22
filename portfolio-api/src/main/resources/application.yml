@@ -58,7 +58,9 @@ spring:
       connection-timeout: 30000
   sql:
     init:
-      mode: never
+      mode: always
+      schema-locations: classpath:db/schema.sql
+      data-locations: classpath:db/data.sql
 
 mybatis:
   mapper-locations: classpath:mapper/**/*.xml
