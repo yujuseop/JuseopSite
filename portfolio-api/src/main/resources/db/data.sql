@@ -64,7 +64,7 @@ INSERT INTO projects (slug, emoji, title, summary, description, participants, du
   '2024.09 ~ 2024.10',
   'https://juseopsite.vercel.app/',
   'https://github.com/yujuseop/JuseopSite',
-  2
+  3
 ),
 (
   'epigram-collaboration',
@@ -76,7 +76,7 @@ INSERT INTO projects (slug, emoji, title, summary, description, participants, du
   '2025.03 ~ 2025.04',
   'https://fe-12-team5-coworkers.vercel.app/',
   'https://github.com/yujuseop/FE12_Team5_epigram',
-  3
+  4
 ),
 (
   'tripview',
@@ -88,7 +88,7 @@ INSERT INTO projects (slug, emoji, title, summary, description, participants, du
   '2025.09 ~ 2025.10 (2주)',
   'https://trip-review-site.vercel.app/',
   'https://github.com/yujuseop/TripReviewSite',
-  4
+  5
 ),
 (
   'wine-community',
@@ -100,7 +100,7 @@ INSERT INTO projects (slug, emoji, title, summary, description, participants, du
   '2025.01 ~ 2025.02 (2주)',
   'https://project-team2-wine.vercel.app/',
   'https://github.com/yujuseop/Project-Team2-WINE',
-  5
+  6
 ),
 (
   'pecspert-aac',
@@ -112,7 +112,7 @@ INSERT INTO projects (slug, emoji, title, summary, description, participants, du
   '2025.06 ~ 2025.07',
   NULL,
   NULL,
-  6
+  2
 );
 
 -- 프로젝트 기술 스택
