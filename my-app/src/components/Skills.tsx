@@ -36,9 +36,11 @@ export default function Skills({ categories }: Props) {
   return (
     <section className="space-y-10">
       <header className="space-y-2 text-center">
-        <h2 className="text-2xl font-bold text-blue-600">기술 스택 및 도구</h2>
+        <h2 className="text-2xl font-bold text-blue-600">
+          기술 스택 및 워크 스타일
+        </h2>
         <p className="text-sm text-muted-foreground lg:text-base">
-          주요 기술 스택 및 도구를 소개합니다.
+          주요 기술 스택 과 워크 스타일을 소개합니다.
         </p>
       </header>
 
