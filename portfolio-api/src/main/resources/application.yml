@@ -1,0 +1,78 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: portfolio-api
+
+---
+# ==================== LOCAL ====================
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    url: jdbc:postgresql://localhost:5433/portfolio_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:db/schema.sql
+      data-locations: classpath:db/data.sql
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.juseop.portfolio.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 100
+    default-statement-timeout: 30
+
+server:
+  port: 8082
+
+logging:
+  level:
+    com.juseop.portfolio: DEBUG
+    org.mybatis: DEBUG
+
+app:
+  cors:
+    allowed-origins: "http://localhost:3000"
+
+---
+# ==================== PROD ====================
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: ${DATABASE_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 30000
+  sql:
+    init:
+      mode: never
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.juseop.portfolio.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+server:
+  port: ${PORT:8080}
+
+logging:
+  level:
+    com.juseop.portfolio: INFO
+
+app:
+  cors:
+    allowed-origins: "https://juseopsite.vercel.app"
