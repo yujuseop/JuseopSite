@@ -57,6 +57,63 @@ export interface ProjectContent {
 
 export const PROJECTS: ProjectContent[] = [
   {
+    slug: "kalisco-kdh",
+    emoji: "🍽️",
+    title: "Kalisco — KDH 외식업 통합 운영 관리 플랫폼",
+    summary:
+      "수기·엑셀에 의존하던 외식업 다점포의 메뉴 원가 관리와 영업일 관리를 디지털화한 풀스택 백오피스 플랫폼입니다.",
+    description:
+      "제조업의 BOM(Bill of Materials) 개념을 외식업 레시피 원가 관리에 도입해, 식자재 단가 변동이 전체 레시피에 즉시 반영되는 구조를 설계했습니다. 전사 기준 캘린더와 매장별 예외를 이중 테이블로 분리해 다점포 영업일을 효율적으로 관리합니다.",
+    techStack: [
+      "Spring Boot",
+      "Java",
+      "MyBatis",
+      "PostgreSQL",
+      "Redis",
+      "Thymeleaf",
+      "jQuery",
+      "Bootstrap 5",
+      "Nginx",
+    ],
+    highlights: [
+      "계층형 BOM 구조(item_type I/R)로 완제품·반제품·원자재를 DB 레벨에서 재귀적으로 관리, 제조업 Sub-Assembly 개념을 '프렙 레시피'로 외식업에 적용",
+      "@Transactional + 단가 이력 분리 설계(kdh_ingredient / kdh_ingredient_price)로 식자재 단가 변경 즉시 원가 일괄 반영 및 데이터 정합성 보장",
+      "엑셀 업로드 실패 행 보관 → 운영자 수정 후 재시도 플로우 설계로 현장 데이터 정합성 운영 부담 감소",
+      "BOM 역추적(where-used) 기능으로 식자재 단가 변경 시 영향받는 레시피를 사전 파악 가능",
+      "Base + Override 이중 테이블 패턴으로 전사 기준 영업일과 매장별 예외를 분리, 데이터 중복 최소화",
+      "displayStatus 추상화로 전체 영업 / 전체 휴일 / 매장별 상이(△) 3단계 상태를 UI와 비즈니스 로직 분리하여 렌더링",
+      "Spring Scheduler + ShedLock 분산 락 배치 설계로 다중 인스턴스 환경에서의 중복 실행 방지",
+    ],
+    participants: "소규모 팀 (2~3인) · 풀스택",
+    duration: "진행 중",
+  },
+  {
+    slug: "pecspert-aac",
+    emoji: "🧩",
+    title: "PECSPERT — AAC 보완대체의사소통 앱",
+    summary:
+      "발화에 어려움이 있는 자폐 아동을 위한 AAC 앱을 개발했습니다. 단어 카드를 선택하면 음성으로 출력되어 감정과 욕구를 자연스럽게 전달할 수 있도록 돕는 서비스입니다.",
+    description:
+      "음성 설정과 기기별 사용성을 개선한 React Native 기반 AAC 프로젝트입니다. 전역 상태 관리와 이중 저장 구조를 적용해 다중 디바이스 동기화와 오프라인 사용성을 함께 고려했습니다.",
+    techStack: [
+      "React Native",
+      "React",
+      "Expo",
+      "React Hook Form",
+      "TypeScript",
+      "Firebase",
+    ],
+    highlights: [
+      "전역 설정값 일관성을 위해 Context API 기반 상태 관리 도입",
+      "Expo Audio로 실시간 음성 미리듣기와 7단계 속도 조절 제공",
+      "Firestore + AsyncStorage 이중 저장으로 다중 디바이스 동기화 및 오프라인 대응",
+      "디자이너·기획자와 협업하며 슬라이더·버튼 등 공용 컴포넌트 개발",
+      "Tech PM 역할로 구독권 시스템 이슈를 디자이너·프론트·백엔드 간 조율",
+    ],
+    participants: "팀 프로젝트 · FE 6명, BE 2명",
+    duration: "2025.06 ~ 2025.07",
+  },
+  {
     slug: "portfolio-site",
     emoji: "🚀",
     title: "YJS 포트폴리오 사이트",
@@ -157,74 +214,5 @@ export const PROJECTS: ProjectContent[] = [
       demo: "https://project-team2-wine.vercel.app/",
       repo: "https://github.com/yujuseop/Project-Team2-WINE",
     },
-  },
-];
-
-export interface ExperienceHighlight {
-  title: string;
-  details: string[];
-}
-
-export interface ExperienceContent {
-  company: string;
-  emoji: string;
-  role: string;
-  employmentType: string;
-  period: string;
-  summary: string;
-  techStack: string[];
-  team: string;
-  highlights: ExperienceHighlight[];
-}
-
-export const EXPERIENCES: ExperienceContent[] = [
-  {
-    company: "PECSPERT",
-    emoji: "🧩",
-    role: "프론트엔드 인턴",
-    employmentType: "인턴",
-    period: "2025.06 ~ 2025.08",
-    summary:
-      "발화에 어려움이 있는 자폐 아동을 위한 보완대체의사소통(AAC) 앱을 개발했습니다. 단어 카드를 선택하면 음성으로 출력되어 감정과 욕구를 자연스럽게 전달할 수 있도록 돕는 서비스입니다.",
-    techStack: [
-      "React Native",
-      "React",
-      "Expo",
-      "React Hook Form",
-      "TypeScript",
-    ],
-    team: "팀 프로젝트 · FE 6명, BE 2명",
-    highlights: [
-      {
-        title: "발화 아동 지원을 위한 음성 시스템 고도화",
-        details: [
-          "전역 설정값 일관성을 위해 Context API 기반 상태 관리 도입",
-          "Expo Audio로 실시간 음성 미리듣기와 7단계 속도 조절 제공",
-          "Firestore + AsyncStorage 이중 저장으로 다중 디바이스 동기화 및 오프라인 대응",
-        ],
-      },
-      {
-        title: "디자인 시스템 구축 및 반응형 확장",
-        details: [
-          "디자이너·기획자와 협업하며 슬라이더·버튼 등 공용 컴포넌트 개발",
-          "태블릿 전용 UI를 비율 기반 레이아웃으로 전환해 모바일까지 대응",
-          "기기 해상도별 텍스트 크기 자동 조정 로직 구현으로 일관된 UX 확보",
-        ],
-      },
-      {
-        title: "성능 최적화와 유지보수성 향상",
-        details: [
-          "음성 설정 UI의 불필요한 리렌더링을 useMemo·useCallback으로 최적화",
-          "공통 UI 모듈화를 통해 코드 수정 범위 30% 이상 축소",
-        ],
-      },
-      {
-        title: "Tech PM 역할로 협업 프로세스 조율",
-        details: [
-          "구독권 시스템 이슈를 디자이너·프론트·백엔드 간 조율하여 일정 지연 방지",
-          "기능 범위와 기대치 정렬로 팀 의사결정과 전달 구조 안정화",
-        ],
-      },
-    ],
   },
 ];
