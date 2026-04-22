@@ -19,6 +19,8 @@ CREATE TABLE IF NOT EXISTS skills (
     description TEXT,
     display_order INT DEFAULT 0
 );
+ALTER TABLE skills ADD COLUMN IF NOT EXISTS level INT DEFAULT 3;
+ALTER TABLE skills ADD COLUMN IF NOT EXISTS description TEXT;
 
 CREATE TABLE IF NOT EXISTS projects (
     id           SERIAL PRIMARY KEY,
