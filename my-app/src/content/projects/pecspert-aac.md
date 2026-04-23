@@ -1,7 +1,7 @@
 ---
 title: "PECSPERT — AAC 보완대체의사소통 앱"
 slug: "pecspert-aac"
-period: "2025.06 ~ 2025.07"
+period: "2025.06 ~ 2025.08"
 team: "프론트엔드(6명), 백엔드(2명), 디자이너(1명)"
 role: "프론트엔드 개발"
 techStack: "React Native, Expo, TypeScript, Firebase"
@@ -60,7 +60,7 @@ techStack: "React Native, Expo, TypeScript, Firebase"
 
 ## 결과물
 
-*(화면 캡처 및 데모 링크 추가 예정)*
+_(화면 캡처 및 데모 링크 추가 예정)_
 
 ---
 

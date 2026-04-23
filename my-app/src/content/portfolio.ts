@@ -111,7 +111,7 @@ export const PROJECTS: ProjectContent[] = [
       "Tech PM 역할로 구독권 시스템 이슈를 디자이너·프론트·백엔드 간 조율",
     ],
     participants: "팀 프로젝트 · FE 6명, BE 2명",
-    duration: "2025.06 ~ 2025.07",
+    duration: "2025.06 ~ 2025.08",
   },
   {
     slug: "portfolio-site",

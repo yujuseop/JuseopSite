@@ -109,7 +109,7 @@ INSERT INTO projects (slug, emoji, title, summary, description, participants, du
   '발화에 어려움이 있는 자폐 아동을 위한 AAC 앱을 개발했습니다. 단어 카드를 선택하면 음성으로 출력되어 감정과 욕구를 자연스럽게 전달할 수 있도록 돕는 서비스입니다.',
   '제조업 관행을 AAC 도메인에 적용해 음성 시스템을 고도화하고, Context API 기반 전역 상태 관리와 Firestore + AsyncStorage 이중 저장으로 다중 디바이스 동기화를 구현했습니다. Tech PM 역할로 직군 간 커뮤니케이션을 조율하며 프로젝트 일정을 안정적으로 관리했습니다.',
   '팀 프로젝트 · FE 6명, BE 2명',
-  '2025.06 ~ 2025.07',
+  '2025.06 ~ 2025.08',
   NULL,
   NULL,
   2
@@ -221,7 +221,7 @@ INSERT INTO experiences (company, emoji, role, employment_type, period, summary,
   '🧩',
   '프론트엔드 개발자 / 인턴',
   '인턴',
-  '2025.06 ~ 2025.07',
+  '2025.06 ~ 2025.08',
   '자폐 아동을 위한 AAC(보완대체의사소통) 앱 개발에 참여했습니다.',
   'FE 6명, BE 2명',
   2
