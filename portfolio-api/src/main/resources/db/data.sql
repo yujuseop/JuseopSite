@@ -64,7 +64,7 @@ INSERT INTO projects (slug, emoji, title, summary, description, participants, du
   '2024.09 ~ 2024.10',
   'https://juseopsite.vercel.app/',
   'https://github.com/yujuseop/JuseopSite',
-  3
+  4
 ),
 (
   'epigram-collaboration',
@@ -76,7 +76,7 @@ INSERT INTO projects (slug, emoji, title, summary, description, participants, du
   '2025.03 ~ 2025.04',
   'https://fe-12-team5-coworkers.vercel.app/',
   'https://github.com/yujuseop/FE12_Team5_epigram',
-  4
+  5
 ),
 (
   'tripview',
@@ -88,7 +88,7 @@ INSERT INTO projects (slug, emoji, title, summary, description, participants, du
   '2025.09 ~ 2025.10 (2주)',
   'https://trip-review-site.vercel.app/',
   'https://github.com/yujuseop/TripReviewSite',
-  5
+  6
 ),
 (
   'wine-community',
@@ -100,7 +100,7 @@ INSERT INTO projects (slug, emoji, title, summary, description, participants, du
   '2025.01 ~ 2025.02 (2주)',
   'https://project-team2-wine.vercel.app/',
   'https://github.com/yujuseop/Project-Team2-WINE',
-  6
+  7
 ),
 (
   'pecspert-aac',
@@ -113,6 +113,18 @@ INSERT INTO projects (slug, emoji, title, summary, description, participants, du
   NULL,
   NULL,
   2
+),
+(
+  'hyper-pass',
+  '🏥',
+  'Hyper Pass — 병원 스마트 셀프 체크인 관제 시스템',
+  '종이 서류와 중복 타이핑으로 낭비되던 원무과 접수 프로세스를 디지털 셀프 체크인과 통합 관제로 재설계하여 병원 운영 효율을 극대화하는 스마트 관제 시스템입니다.',
+  '원무과 재직 경험을 바탕으로 신환 접수 병목 현상을 해결하기 위해 데이터 입력 주체를 환자로 전환했습니다. EMR 연동 불가 환경을 고려한 하이브리드 운영 전략으로 시스템 안정성과 즉시 도입 가능성을 동시에 확보했습니다.',
+  '개인 프로젝트',
+  '2026.04 ~ 2026.04',
+  NULL,
+  NULL,
+  3
 );
 
 -- 프로젝트 기술 스택
@@ -157,7 +169,11 @@ JOIN (VALUES
   ('pecspert-aac', 'Expo', 3),
   ('pecspert-aac', 'React Hook Form', 4),
   ('pecspert-aac', 'TypeScript', 5),
-  ('pecspert-aac', 'Firebase', 6)
+  ('pecspert-aac', 'Firebase', 6),
+  ('hyper-pass', 'Java', 1),
+  ('hyper-pass', 'Spring Boot', 2),
+  ('hyper-pass', 'PostgreSQL', 3),
+  ('hyper-pass', 'React', 4)
 ) AS t(slug, tech_name, display_order) ON p.slug = t.slug;
 
 -- 프로젝트 하이라이트
@@ -183,6 +199,10 @@ JOIN (VALUES
   ('pecspert-aac', '공통 UI 모듈화를 통해 코드 수정 범위 30% 이상 축소', 8),
   ('pecspert-aac', '구독권 시스템 이슈를 디자이너·프론트·백엔드 간 조율하여 일정 지연 방지', 9),
   ('pecspert-aac', '기능 범위와 기대치 정렬로 팀 의사결정과 전달 구조 안정화', 10),
+  ('hyper-pass', '초진/재진 분류 로직으로 입력 항목을 최적화한 환자 셀프 체크인 UI 구현', 1),
+  ('hyper-pass', '입력된 환자 데이터를 실시간 모니터링·제어하는 원무과 통합 대시보드 구축', 2),
+  ('hyper-pass', 'EMR 연동 불가 환경을 고려한 하이브리드 운영 전략(환자 입력 + 직원 확인) 설계', 3),
+  ('hyper-pass', '데이터 입력 주체를 환자로 전환하여 신환 접수 병목 현상 해소 및 창구 독점 제거', 4),
   ('portfolio-site', '프로젝트·블로그·연락처를 한 곳에서 관리하도록 정보 구조(IA)를 재정비', 1),
   ('portfolio-site', 'MDX 기반 블로그 게시글 빌드 파이프라인을 구축해 마크다운만으로 글 작성 가능', 2),
   ('portfolio-site', '다크 모드 및 반응형 레이아웃을 Tailwind CSS 커스텀 프리셋으로 구성', 3),
