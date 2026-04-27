@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="flex p-3 items-center text-blue-600 dark:text-white transition-colors duration-200">
       <Link href="/" className="font-bold text-3xl lg:text-5xl mr-auto">
-        Y J S.Studio
+        Y-NOTE
       </Link>
       <nav className="flex items-center gap-4 text-sm lg:text-base font-medium mr-3">
         {NAV_LINKS.map((link) => (

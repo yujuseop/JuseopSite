@@ -62,10 +62,10 @@ export default function Home() {
     <div className="flex flex-col items-center gap-10 py-8">
       <header className="space-y-2 text-center">
         <h1 className="text-3xl font-bold text-blue-600 lg:text-4xl">
-          안녕하세요, 유주섭입니다
+          welcome to my note space
         </h1>
         <p className="text-sm text-muted-foreground lg:text-base">
-          개발자 포트폴리오입니다. 섹션을 선택하세요.
+          코드로 기록하고, 기술로 소통하는 공간에 오신 것을 환영합니다.
         </p>
       </header>
 

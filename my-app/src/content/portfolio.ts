@@ -114,27 +114,6 @@ export const PROJECTS: ProjectContent[] = [
     duration: "2025.06 ~ 2025.08",
   },
   {
-    slug: "portfolio-site",
-    emoji: "🚀",
-    title: "YJS 포트폴리오 사이트",
-    summary:
-      "Next.js와 Tailwind CSS로 구축한 반응형 포트폴리오, 다크 모드와 블로그를 지원합니다.",
-    description:
-      "디자인 시스템과 콘텐츠 관리를 효율적으로 적용하기 위해 Next.js 15 App Router를 활용해 설계한 개인 포트폴리오입니다.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "MDX"],
-    highlights: [
-      "프로젝트·블로그·연락처를 한 곳에서 관리하도록 정보 구조(IA)를 재정비",
-      "MDX 기반 블로그 게시글 빌드 파이프라인을 구축해 마크다운만으로 글 작성 가능",
-      "다크 모드 및 반응형 레이아웃을 Tailwind CSS 커스텀 프리셋으로 구성",
-    ],
-    participants: "개인 프로젝트",
-    duration: "2024.09 ~ 2024.10",
-    links: {
-      demo: "https://juseopsite.vercel.app/",
-      repo: "https://github.com/yujuseop/JuseopSite",
-    },
-  },
-  {
     slug: "epigram-collaboration",
     emoji: "🤝",
     title: "Epigram 협업 프로세스 최적화",
@@ -183,36 +162,6 @@ export const PROJECTS: ProjectContent[] = [
     links: {
       demo: "https://trip-review-site.vercel.app/",
       repo: "https://github.com/yujuseop/TripReviewSite",
-    },
-  },
-  {
-    slug: "wine-community",
-    emoji: "🍷",
-    title: "WINE 커뮤니티 플랫폼",
-    summary:
-      "와인을 탐색하고 애호가들이 소통할 수 있는 웹 애플리케이션으로, 검색·필터·리뷰 기능을 제공해 맞춤형 와인 관리와 커뮤니티 경험을 지원합니다.",
-    description:
-      "Next.js 기반으로 와인 데이터 탐색과 커뮤니티 기능을 통합하고, 인증·프로필 관리·무한 스크롤 등 사용자 중심 UX를 구축했습니다.",
-    techStack: [
-      "Next.js",
-      "Tailwind CSS",
-      "TypeScript",
-      "React Hook Form",
-      "React Query",
-    ],
-    highlights: [
-      "SSR/CSR 토큰 검증으로 인증되지 않은 사용자를 로그인 페이지로 리다이렉트해 보안 강화",
-      "프로필 이미지 변경 시 URL.createObjectURL 미리보기로 UX 개선, 최종 저장 시에만 서버 요청",
-      "내가 작성한 와인·리뷰 리스트를 제공하고 수정/삭제 시 로컬 상태를 즉시 반영해 새로고침 없는 UI 업데이트",
-      "IntersectionObserver 기반 무한 스크롤로 초기 로딩 시간 단축 및 점진적 데이터 로드",
-      "Skeleton UI와 로딩 스피너를 결합해 로딩 구간에서도 안정적인 사용자 경험 제공",
-      "프로필 이미지·와인 카드 등 반복 UI를 공용 컴포넌트로 분리해 유지보수성과 일관성 향상",
-    ],
-    participants: "팀 프로젝트 (FE 6명)",
-    duration: "2025.01 ~ 2025.02 (2주)",
-    links: {
-      demo: "https://project-team2-wine.vercel.app/",
-      repo: "https://github.com/yujuseop/Project-Team2-WINE",
     },
   },
 ];

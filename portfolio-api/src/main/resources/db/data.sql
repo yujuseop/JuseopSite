@@ -55,18 +55,6 @@ INSERT INTO projects (slug, emoji, title, summary, description, participants, du
   1
 ),
 (
-  'portfolio-site',
-  '🚀',
-  'YJS 포트폴리오 사이트',
-  'Next.js와 Tailwind CSS로 구축한 반응형 포트폴리오, 다크 모드와 블로그를 지원합니다.',
-  '디자인 시스템과 콘텐츠 관리를 효율적으로 적용하기 위해 Next.js 15 App Router를 활용해 설계한 개인 포트폴리오입니다.',
-  '개인 프로젝트',
-  '2024.09 ~ 2024.10',
-  'https://juseopsite.vercel.app/',
-  'https://github.com/yujuseop/JuseopSite',
-  4
-),
-(
   'epigram-collaboration',
   '🤝',
   'Epigram 협업 프로세스 최적화',
@@ -88,19 +76,7 @@ INSERT INTO projects (slug, emoji, title, summary, description, participants, du
   '2025.09 ~ 2025.10 (2주)',
   'https://trip-review-site.vercel.app/',
   'https://github.com/yujuseop/TripReviewSite',
-  6
-),
-(
-  'wine-community',
-  '🍷',
-  'WINE 커뮤니티 플랫폼',
-  '와인을 탐색하고 애호가들이 소통할 수 있는 웹 애플리케이션으로, 검색·필터·리뷰 기능을 제공해 맞춤형 와인 관리와 커뮤니티 경험을 지원합니다.',
-  'Next.js 기반으로 와인 데이터 탐색과 커뮤니티 기능을 통합하고, 인증·프로필 관리·무한 스크롤 등 사용자 중심 UX를 구축했습니다.',
-  '팀 프로젝트 (FE 6명)',
-  '2025.01 ~ 2025.02 (2주)',
-  'https://project-team2-wine.vercel.app/',
-  'https://github.com/yujuseop/Project-Team2-WINE',
-  7
+  4
 ),
 (
   'pecspert-aac',
@@ -143,10 +119,6 @@ JOIN (VALUES
   ('kalisco-kdh', 'OCI', 9),
   ('kalisco-kdh', 'Nginx', 10),
   ('kalisco-kdh', 'Google Gemini', 11),
-  ('portfolio-site', 'Next.js', 1),
-  ('portfolio-site', 'TypeScript', 2),
-  ('portfolio-site', 'Tailwind CSS', 3),
-  ('portfolio-site', 'MDX', 4),
   ('epigram-collaboration', 'React', 1),
   ('epigram-collaboration', 'TypeScript', 2),
   ('epigram-collaboration', 'Recharts', 3),
@@ -159,11 +131,6 @@ JOIN (VALUES
   ('tripview', 'React Query', 5),
   ('tripview', 'React Hook Form', 6),
   ('tripview', 'Zod', 7),
-  ('wine-community', 'Next.js', 1),
-  ('wine-community', 'Tailwind CSS', 2),
-  ('wine-community', 'TypeScript', 3),
-  ('wine-community', 'React Hook Form', 4),
-  ('wine-community', 'React Query', 5),
   ('pecspert-aac', 'React Native', 1),
   ('pecspert-aac', 'React', 2),
   ('pecspert-aac', 'Expo', 3),
@@ -203,22 +170,13 @@ JOIN (VALUES
   ('hyper-pass', '입력된 환자 데이터를 실시간 모니터링·제어하는 원무과 통합 대시보드 구축', 2),
   ('hyper-pass', 'EMR 연동 불가 환경을 고려한 하이브리드 운영 전략(환자 입력 + 직원 확인) 설계', 3),
   ('hyper-pass', '데이터 입력 주체를 환자로 전환하여 신환 접수 병목 현상 해소 및 창구 독점 제거', 4),
-  ('portfolio-site', '프로젝트·블로그·연락처를 한 곳에서 관리하도록 정보 구조(IA)를 재정비', 1),
-  ('portfolio-site', 'MDX 기반 블로그 게시글 빌드 파이프라인을 구축해 마크다운만으로 글 작성 가능', 2),
-  ('portfolio-site', '다크 모드 및 반응형 레이아웃을 Tailwind CSS 커스텀 프리셋으로 구성', 3),
   ('epigram-collaboration', 'Notion과 tldraw를 활용한 협업 문서화와 Git Flow, Vercel CI/CD 구성으로 빌드 오류 70% 이상 감소', 1),
   ('epigram-collaboration', 'PieChart와 리스트 UI를 기반으로 감정 데이터를 시각화하고 localStorage로 상태를 보존', 2),
   ('epigram-collaboration', 'Toastify 알림을 도입해 사용자 피드백 루프를 강화하고 감정 인식 효율 향상', 3),
   ('tripview', 'Supabase Auth와 createServerClient를 활용한 SSR 세션 동기화로 인증 일관성 확보', 1),
   ('tripview', '미들웨어 기반 라우팅 제어로 접근 권한 관리 및 보안 강화', 2),
   ('tripview', 'React Hook Form + Zod 조합으로 타입 안전한 폼 유효성 검사와 커스텀 훅 기반 상태 관리', 3),
-  ('tripview', 'CSS 자동 주입 기능을 갖춘 js-toastify를 제작해 프레임워크 무관 토스트 시스템 구현', 4),
-  ('wine-community', 'SSR/CSR 토큰 검증으로 인증되지 않은 사용자를 로그인 페이지로 리다이렉트해 보안 강화', 1),
-  ('wine-community', '프로필 이미지 변경 시 URL.createObjectURL 미리보기로 UX 개선, 최종 저장 시에만 서버 요청', 2),
-  ('wine-community', '내가 작성한 와인·리뷰 리스트를 제공하고 수정/삭제 시 로컬 상태를 즉시 반영해 새로고침 없는 UI 업데이트', 3),
-  ('wine-community', 'IntersectionObserver 기반 무한 스크롤로 초기 로딩 시간 단축 및 점진적 데이터 로드', 4),
-  ('wine-community', 'Skeleton UI와 로딩 스피너를 결합해 로딩 구간에서도 안정적인 사용자 경험 제공', 5),
-  ('wine-community', '프로필 이미지·와인 카드 등 반복 UI를 공용 컴포넌트로 분리해 유지보수성과 일관성 향상', 6)
+  ('tripview', 'CSS 자동 주입 기능을 갖춘 js-toastify를 제작해 프레임워크 무관 토스트 시스템 구현', 4)
 ) AS h(slug, content, display_order) ON p.slug = h.slug;
 
 -- ============================================================
@@ -233,7 +191,7 @@ INSERT INTO experiences (company, emoji, role, employment_type, period, summary,
   '프리랜서',
   '2026.01 ~ 2026.05',
   '캘리스코 영업관리 시스템(FNB System) 교체 프로젝트 백엔드 개발을 담당했습니다.',
-  '소규모 팀',
+  '소규모 팀 (PM 1명, BE 2명)',
   1
 ),
 (
